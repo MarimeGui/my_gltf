@@ -12,4 +12,6 @@ pub struct Primitive {
     pub attributes: HashMap<String, usize>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub indices: Option<usize>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub material: Option<usize>
 }
