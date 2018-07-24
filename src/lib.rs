@@ -7,10 +7,13 @@ pub mod accessors;
 pub mod asset;
 pub mod buffer_views;
 pub mod buffers;
+pub mod materials;
 pub mod meshes;
 pub mod nodes;
 pub mod scenes;
 pub mod skins;
+pub mod textures;
+pub mod images;
 
 use serde_json::Error;
 use std::io::Write;
@@ -26,6 +29,10 @@ pub struct GlTF {
     #[serde(rename = "bufferViews")]
     pub buffer_views: Option<buffer_views::BufferViews>,
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub images: Option<images::Images>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub materials: Option<materials::Materials>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub meshes: Option<meshes::Meshes>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub nodes: Option<nodes::Nodes>,
@@ -35,6 +42,8 @@ pub struct GlTF {
     pub scenes: Option<scenes::Scenes>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub skins: Option<skins::Skins>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub textures: Option<textures::Textures>,
 }
 
 impl GlTF {
