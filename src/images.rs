@@ -6,5 +6,5 @@ pub struct Image {
     pub uri: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     #[serde(rename = "bufferView")]
-    pub buffer_view: Option<usize>
+    pub buffer_view: Option<usize>,
 }

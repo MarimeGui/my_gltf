@@ -7,13 +7,13 @@ pub mod accessors;
 pub mod asset;
 pub mod buffer_views;
 pub mod buffers;
+pub mod images;
 pub mod materials;
 pub mod meshes;
 pub mod nodes;
 pub mod scenes;
 pub mod skins;
 pub mod textures;
-pub mod images;
 
 use serde_json::Error;
 use std::io::Write;

@@ -4,7 +4,7 @@ pub type Materials = Vec<Material>;
 pub struct Material {
     #[serde(skip_serializing_if = "Option::is_none")]
     #[serde(rename = "pbrMetallicRoughness")]
-    pub pbr_metallic_roughness: Option<PbrMetallicRoughness>
+    pub pbr_metallic_roughness: Option<PbrMetallicRoughness>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -17,11 +17,11 @@ pub struct PbrMetallicRoughness {
     pub metallic_factor: Option<f64>,
     #[serde(skip_serializing_if = "Option::is_none")]
     #[serde(rename = "roughnessFactor")]
-    pub roughness_factor: Option<f64>
+    pub roughness_factor: Option<f64>,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct BaseColorTexture {
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub index: Option<usize>
+    pub index: Option<usize>,
 }

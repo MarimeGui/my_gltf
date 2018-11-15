@@ -13,5 +13,5 @@ pub struct Primitive {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub indices: Option<usize>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub material: Option<usize>
+    pub material: Option<usize>,
 }
